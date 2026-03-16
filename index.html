@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Espaço Seguro</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🌿 Espaço Seguro</h1>
+
+<nav>
+<a href="index.html">Início</a>
+<a href="recursos.html">Recursos</a>
+<a href="sobre.html">Sobre</a>
+</nav>
+
+</header>
+
+<div class="frase" id="frase"></div>
+
+<div class="stats">
+Mensagens da comunidade: <span id="contador">0</span>
+</div>
+
+<section class="container">
+
+<h2>Compartilhe sua história</h2>
+
+<input id="nome" placeholder="Seu nome (opcional)">
+
+<textarea id="mensagem" placeholder="Escreva algo que esteja sentindo..."></textarea>
+
+<button onclick="enviarMensagem()">Enviar</button>
+<button onclick="limparMural()">Limpar mural</button>
+
+<div class="posts" id="mural"></div>
+
+</section>
+
+<footer>
+
+💜 Você não está sozinho. Procure ajuda profissional se precisar.
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
