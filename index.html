@@ -1,59 +1,156 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Espaço Seguro</title>
-
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inside-me · Espaço Seguro</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<header>
+  <!-- Fundo animado -->
+  <div class="bg-orbs">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+  </div>
 
-<h1>🌿 Espaço Seguro</h1>
+  <header>
+    <div class="logo">
+      <span class="logo-icon">🫀</span>
+      <span class="logo-text">Inside<em>me</em></span>
+    </div>
+    <nav>
+      <a href="index.html" class="active">Início</a>
+      <a href="recursos.html">Recursos</a>
+      <a href="respirar.html">Respirar</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+    <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+  </header>
 
-<nav>
-<a href="index.html">Início</a>
-<a href="recursos.html">Recursos</a>
-<a href="sobre.html">Sobre</a>
-</nav>
+  <main>
 
-</header>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="hero-label">Um espaço só seu</p>
+        <h1>O que você está <br><em>sentindo hoje?</em></h1>
+        <p class="hero-sub">Aqui você pode compartilhar, ler e se sentir menos sozinho. Nenhum julgamento — apenas empatia.</p>
+      </div>
+      <div class="frase-card" id="fraseCard">
+        <span class="frase-icone">✨</span>
+        <p id="frase"></p>
+        <button class="btn-secondary" onclick="novaFrase()">Nova frase</button>
+      </div>
+    </section>
 
-<div class="frase" id="frase"></div>
+    <!-- Stats bar -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <span class="stat-num" id="contador">0</span>
+        <span class="stat-label">histórias compartilhadas</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">💜</span>
+        <span class="stat-label">você não está sozinho</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">🕊️</span>
+        <span class="stat-label">espaço seguro e anônimo</span>
+      </div>
+    </div>
 
-<div class="stats">
-Mensagens da comunidade: <span id="contador">0</span>
-</div>
+    <!-- Formulário -->
+    <section class="container form-section">
+      <div class="form-header">
+        <h2>Compartilhe sua história</h2>
+        <p>Escreva o que está no coração. Pode ser anônimo — ninguém vai te julgar aqui.</p>
+      </div>
 
-<section class="container">
+      <div class="humor-selector">
+        <p class="humor-label">Como você está se sentindo agora?</p>
+        <div class="humores">
+          <button class="humor-btn" onclick="selecionarHumor(this, '😔')" title="Triste">😔</button>
+          <button class="humor-btn" onclick="selecionarHumor(this, '😟')" title="Ansioso">😟</button>
+          <button class="humor-btn" onclick="selecionarHumor(this, '😐')" title="Neutro">😐</button>
+          <button class="humor-btn" onclick="selecionarHumor(this, '🙂')" title="Bem">🙂</button>
+          <button class="humor-btn" onclick="selecionarHumor(this, '😊')" title="Ótimo">😊</button>
+        </div>
+      </div>
 
-<h2>Compartilhe sua história</h2>
+      <input id="nome" placeholder="Seu nome (opcional — pode ficar anônimo)" autocomplete="off">
+      <textarea id="mensagem" placeholder="Escreva algo que esteja sentindo... pode ser uma frase, um desabafo, uma conquista." rows="5"></textarea>
 
-<input id="nome" placeholder="Seu nome (opcional)">
+      <div class="char-count"><span id="charNum">0</span>/300 caracteres</div>
 
-<textarea id="mensagem" placeholder="Escreva algo que esteja sentindo..."></textarea>
+      <div class="form-actions">
+        <button class="btn-primary" onclick="enviarMensagem()">💜 Publicar no mural</button>
+        <button class="btn-ghost" onclick="limparMural()">Limpar mural</button>
+      </div>
 
-<button onclick="enviarMensagem()">Enviar</button>
-<button onclick="limparMural()">Limpar mural</button>
+      <div id="feedback" class="feedback hidden"></div>
+    </section>
 
-<div class="posts" id="mural"></div>
+    <!-- Mural -->
+    <section class="container mural-section">
+      <div class="mural-header">
+        <h2>🌸 Mural da Comunidade</h2>
+        <div class="filtros">
+          <button class="filtro-btn active" onclick="filtrarHumor(this, 'todos')">Todos</button>
+          <button class="filtro-btn" onclick="filtrarHumor(this, '😔')">😔</button>
+          <button class="filtro-btn" onclick="filtrarHumor(this, '😟')">😟</button>
+          <button class="filtro-btn" onclick="filtrarHumor(this, '😐')">😐</button>
+          <button class="filtro-btn" onclick="filtrarHumor(this, '🙂')">🙂</button>
+          <button class="filtro-btn" onclick="filtrarHumor(this, '😊')">😊</button>
+        </div>
+      </div>
+      <div class="posts" id="mural">
+        <div class="empty-state">
+          <p>✨ Seja o primeiro a compartilhar algo hoje.</p>
+        </div>
+      </div>
+    </section>
 
-</section>
+    <!-- Recursos rápidos -->
+    <section class="recursos-rapidos">
+      <h2>Precisa de ajuda agora?</h2>
+      <div class="cards-grid">
+        <a href="respirar.html" class="card-recurso">
+          <span>🫁</span>
+          <h3>Exercício de Respiração</h3>
+          <p>Técnica 4-7-8 para acalmar a ansiedade em minutos</p>
+        </a>
+        <a href="recursos.html" class="card-recurso">
+          <span>📚</span>
+          <h3>Recursos de Apoio</h3>
+          <p>Dicas, práticas e onde buscar ajuda profissional</p>
+        </a>
+        <a href="sobre.html" class="card-recurso">
+          <span>💬</span>
+          <h3>CVV — Centro de Valorização</h3>
+          <p>Ligue <strong>188</strong> — 24h por dia, gratuito</p>
+        </a>
+      </div>
+    </section>
 
-<footer>
+  </main>
 
-💜 Você não está sozinho. Procure ajuda profissional se precisar.
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">🫀</span>
+        <span class="logo-text">Inside<em>me</em></span>
+      </div>
+      <p>Pedir ajuda é um ato de coragem. Você merece apoio. 💜</p>
+      <p class="footer-cvv">Em crise? Ligue <strong>188</strong> (CVV) ou acesse <strong>cvv.org.br</strong></p>
+    </div>
+  </footer>
 
-</footer>
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>

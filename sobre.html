@@ -1,57 +1,158 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Sobre</title>
-
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre · Inside-me</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<header>
+  <div class="bg-orbs">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+  </div>
 
-<h1>Sobre o Projeto</h1>
+  <header>
+    <div class="logo">
+      <span class="logo-icon">🫀</span>
+      <span class="logo-text">Inside<em>me</em></span>
+    </div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="recursos.html">Recursos</a>
+      <a href="respirar.html">Respirar</a>
+      <a href="sobre.html" class="active">Sobre</a>
+    </nav>
+    <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+  </header>
 
-<nav>
-<a href="index.html">Início</a>
-<a href="recursos.html">Recursos</a>
-<a href="sobre.html">Sobre</a>
-</nav>
+  <main>
 
-</header>
+    <section class="page-hero">
+      <p class="hero-label">Nossa história</p>
+      <h1>Sobre o <em>Inside-me</em></h1>
+      <p class="hero-sub">Um projeto criado com cuidado, para quem precisa ser ouvido.</p>
+    </section>
 
-<section class="container">
+    <!-- Missão -->
+    <section class="container sobre-missao">
+      <div class="missao-texto">
+        <h2>Nossa <em>missão</em></h2>
+        <p>O <strong>Inside-me</strong> nasceu da percepção de que muitos jovens carregam sentimentos difíceis sem saber com quem falar. A adolescência é uma fase intensa — cheia de descobertas, mas também de inseguranças, pressões e dúvidas.</p>
+        <p>Criamos este espaço para que cada estudante possa expressar o que sente, ler as histórias de colegas e perceber que não está sozinho. A empatia começa quando nos permitimos ser honestos sobre o que vivemos.</p>
+        <p>O Inside-me não substitui ajuda profissional — pelo contrário, incentiva que cada um busque o suporte que merece.</p>
+      </div>
+      <div class="missao-valores">
+        <div class="valor-item">
+          <span>🛡️</span>
+          <div>
+            <h4>Segurança</h4>
+            <p>Espaço anônimo, sem julgamentos</p>
+          </div>
+        </div>
+        <div class="valor-item">
+          <span>💜</span>
+          <div>
+            <h4>Empatia</h4>
+            <p>Ouvir e ser ouvido transforma</p>
+          </div>
+        </div>
+        <div class="valor-item">
+          <span>🌱</span>
+          <div>
+            <h4>Crescimento</h4>
+            <p>Cada história compartilhada fortalece</p>
+          </div>
+        </div>
+        <div class="valor-item">
+          <span>🤝</span>
+          <div>
+            <h4>Comunidade</h4>
+            <p>Juntos somos mais fortes</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<h2>Nosso objetivo</h2>
+    <!-- Dados sobre saúde mental -->
+    <section class="container container-dark">
+      <h2 class="section-title">📊 A realidade da saúde mental jovem</h2>
+      <p class="section-sub">Entender os números ajuda a quebrar o estigma.</p>
+      <div class="dados-grid">
+        <div class="dado-card">
+          <div class="dado-num">1 em 5</div>
+          <p>jovens no mundo experimenta algum transtorno mental até os 14 anos (OMS)</p>
+        </div>
+        <div class="dado-card">
+          <div class="dado-num">75%</div>
+          <p>das condições de saúde mental surgem antes dos 25 anos de idade</p>
+        </div>
+        <div class="dado-card">
+          <div class="dado-num">56%</div>
+          <p>dos jovens brasileiros relatam sentir ansiedade frequente no ambiente escolar</p>
+        </div>
+        <div class="dado-card">
+          <div class="dado-num">188</div>
+          <p>é o número do CVV — gratuito, sigiloso, 24 horas por dia</p>
+        </div>
+      </div>
+    </section>
 
-<p>
+    <!-- O que este projeto não é -->
+    <section class="container">
+      <h2 class="section-title">⚠️ Importante saber</h2>
+      <div class="importante-lista">
+        <div class="importante-item nao">
+          <span>✗</span>
+          <p>O Inside-me <strong>não é</strong> um serviço de atendimento psicológico</p>
+        </div>
+        <div class="importante-item nao">
+          <span>✗</span>
+          <p>Não substitui terapia, psiquiatria ou qualquer ajuda profissional</p>
+        </div>
+        <div class="importante-item nao">
+          <span>✗</span>
+          <p>Não monitora ou gerencia situações de crise</p>
+        </div>
+        <div class="importante-item sim">
+          <span>✓</span>
+          <p>É um espaço de escuta, expressão e conexão entre jovens</p>
+        </div>
+        <div class="importante-item sim">
+          <span>✓</span>
+          <p>Oferece recursos informativos e ferramentas de autocuidado</p>
+        </div>
+        <div class="importante-item sim">
+          <span>✓</span>
+          <p>Incentiva ativamente a busca por ajuda profissional quando necessário</p>
+        </div>
+      </div>
+    </section>
 
-O Espaço Seguro foi criado para permitir que pessoas compartilhem sentimentos,
-histórias e dificuldades de forma anônima e encontrem apoio na comunidade.
+    <!-- CTA -->
+    <section class="cta-section">
+      <h2>Faça parte da comunidade</h2>
+      <p>Sua história importa. Seu sentimento importa. <em>Você</em> importa.</p>
+      <a href="index.html" class="btn-primary">Compartilhar no mural 💜</a>
+    </section>
 
-</p>
+  </main>
 
-<p>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">🫀</span>
+        <span class="logo-text">Inside<em>me</em></span>
+      </div>
+      <p>Pedir ajuda é um ato de coragem. Você merece apoio. 💜</p>
+      <p class="footer-cvv">Em crise? Ligue <strong>188</strong> (CVV) ou acesse <strong>cvv.org.br</strong></p>
+    </div>
+  </footer>
 
-Nosso objetivo é promover empatia, solidariedade e cuidado com a saúde mental.
-
-</p>
-
-</section>
-
-<footer>
-
-💜 Espalhando apoio e empatia.
-
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
-

@@ -1,53 +1,162 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Recursos</title>
-
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recursos · Inside-me</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<header>
+  <div class="bg-orbs">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+  </div>
 
-<h1>📚 Recursos de Apoio</h1>
+  <header>
+    <div class="logo">
+      <span class="logo-icon">🫀</span>
+      <span class="logo-text">Inside<em>me</em></span>
+    </div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="recursos.html" class="active">Recursos</a>
+      <a href="respirar.html">Respirar</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+    <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+  </header>
 
-<nav>
-<a href="index.html">Início</a>
-<a href="recursos.html">Recursos</a>
-<a href="sobre.html">Sobre</a>
-</nav>
+  <main>
 
-</header>
+    <section class="page-hero">
+      <p class="hero-label">Cuidando de você</p>
+      <h1>Recursos de <em>Apoio</em></h1>
+      <p class="hero-sub">Ferramentas, práticas e contatos que podem fazer diferença no seu dia.</p>
+    </section>
 
-<section class="container">
+    <!-- Dicas práticas -->
+    <section class="container">
+      <h2 class="section-title">🌿 Práticas para o bem-estar</h2>
+      <div class="dicas-grid">
 
-<h2>Dicas para cuidar da saúde mental</h2>
+        <div class="dica-card">
+          <div class="dica-icone">🧠</div>
+          <h3>Fale com alguém</h3>
+          <p>Conversar com uma pessoa de confiança — amigo, familiar, professor — alivia o peso que carregamos sozinhos. Não precisa ser perfeito, só honesto.</p>
+        </div>
 
-<ul>
+        <div class="dica-card">
+          <div class="dica-icone">🫁</div>
+          <h3>Respire com consciência</h3>
+          <p>A respiração profunda ativa o sistema nervoso parassimpático, reduzindo ansiedade rapidamente. Experimente nosso <a href="respirar.html">exercício guiado</a>.</p>
+        </div>
 
-<li>🧠 Conversar com alguém de confiança</li>
-<li>🌿 Praticar respiração ou meditação</li>
-<li>📓 Escrever seus sentimentos</li>
-<li>🚶 Fazer caminhadas</li>
-<li>💬 Procurar ajuda profissional</li>
+        <div class="dica-card">
+          <div class="dica-icone">📓</div>
+          <h3>Escreva seus sentimentos</h3>
+          <p>Colocar em palavras o que você sente ajuda o cérebro a organizar emoções difusas. Não precisa mostrar para ninguém — escreva para você.</p>
+        </div>
 
-</ul>
+        <div class="dica-card">
+          <div class="dica-icone">🚶</div>
+          <h3>Mova o seu corpo</h3>
+          <p>Uma caminhada de 20 minutos libera endorfinas e reduz cortisol. Não precisa ser academia — qualquer movimento conta e já ajuda muito.</p>
+        </div>
 
-</section>
+        <div class="dica-card">
+          <div class="dica-icone">🌙</div>
+          <h3>Cuide do seu sono</h3>
+          <p>Dormir mal intensifica emoções negativas. Tente criar uma rotina: desligar telas 30 min antes, horário fixo para dormir e acordar.</p>
+        </div>
 
-<footer>
+        <div class="dica-card">
+          <div class="dica-icone">🎨</div>
+          <h3>Expresse-se criativamente</h3>
+          <p>Música, desenho, escrita, dança — qualquer forma de expressão artística é terapêutica e ajuda a processar emoções que as palavras não alcançam.</p>
+        </div>
 
-💜 Pedir ajuda é um ato de coragem.
+      </div>
+    </section>
 
-</footer>
+    <!-- Sinais de alerta -->
+    <section class="container container-dark">
+      <h2 class="section-title">⚠️ Quando buscar ajuda profissional?</h2>
+      <p class="section-sub">Se você estiver passando por qualquer uma dessas situações, é importante conversar com um adulto de confiança ou buscar apoio especializado.</p>
+      <div class="alertas-lista">
+        <div class="alerta-item">😞 Tristeza persistente por mais de 2 semanas</div>
+        <div class="alerta-item">😰 Ansiedade que impede atividades do dia a dia</div>
+        <div class="alerta-item">🚫 Isolamento e afastamento das pessoas</div>
+        <div class="alerta-item">💭 Pensamentos de se machucar ou suicídio</div>
+        <div class="alerta-item">😴 Dificuldade para dormir ou dormir demais</div>
+        <div class="alerta-item">🍽️ Mudanças bruscas no apetite</div>
+        <div class="alerta-item">📉 Queda repentina no desempenho escolar</div>
+        <div class="alerta-item">😤 Irritabilidade intensa ou explosões emocionais</div>
+      </div>
+      <p class="alerta-lembrete">Lembre-se: pedir ajuda não é fraqueza. É o ato mais corajoso que você pode fazer por si mesmo. 💜</p>
+    </section>
 
+    <!-- Contatos de ajuda -->
+    <section class="container">
+      <h2 class="section-title">📞 Onde buscar ajuda</h2>
+      <div class="contatos-grid">
+
+        <div class="contato-card destaque">
+          <div class="contato-icone">💙</div>
+          <h3>CVV — Centro de Valorização da Vida</h3>
+          <p>Apoio emocional e prevenção do suicídio. Atendimento 24h, gratuito e sigiloso.</p>
+          <div class="contato-info">
+            <span>📞 188</span>
+            <span>💻 cvv.org.br</span>
+          </div>
+        </div>
+
+        <div class="contato-card">
+          <div class="contato-icone">🏥</div>
+          <h3>CAPS — Centro de Atenção Psicossocial</h3>
+          <p>Serviço público gratuito de saúde mental. Procure o mais próximo de você na sua cidade.</p>
+          <div class="contato-info">
+            <span>🏛️ Pelo SUS, gratuito</span>
+          </div>
+        </div>
+
+        <div class="contato-card">
+          <div class="contato-icone">🚨</div>
+          <h3>SAMU</h3>
+          <p>Para situações de emergência médica e psiquiátrica.</p>
+          <div class="contato-info">
+            <span>📞 192</span>
+          </div>
+        </div>
+
+        <div class="contato-card">
+          <div class="contato-icone">👩‍🏫</div>
+          <h3>Escola e família</h3>
+          <p>Um professor, orientador ou familiar pode ser o primeiro passo. Não subestime o poder de uma conversa.</p>
+          <div class="contato-info">
+            <span>💬 Fale com alguém hoje</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">🫀</span>
+        <span class="logo-text">Inside<em>me</em></span>
+      </div>
+      <p>Pedir ajuda é um ato de coragem. Você merece apoio. 💜</p>
+      <p class="footer-cvv">Em crise? Ligue <strong>188</strong> (CVV) ou acesse <strong>cvv.org.br</strong></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

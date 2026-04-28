@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Respirar · Inside-me</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body class="respirar-page">
+
+  <div class="bg-orbs respirar-orbs">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+  </div>
+
+  <header>
+    <div class="logo">
+      <span class="logo-icon">🫀</span>
+      <span class="logo-text">Inside<em>me</em></span>
+    </div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="recursos.html">Recursos</a>
+      <a href="respirar.html" class="active">Respirar</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+    <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <p class="hero-label">Pause. Sinta. Respire.</p>
+      <h1>Exercício de <em>Respiração</em></h1>
+      <p class="hero-sub">A técnica 4-7-8 é uma das mais eficazes para reduzir ansiedade. Experimente agora — leva menos de 2 minutos.</p>
+    </section>
+
+    <section class="container respirar-container">
+
+      <div class="tecnicas-selector">
+        <button class="tecnica-btn active" onclick="selecionarTecnica(this, '478')">4-7-8</button>
+        <button class="tecnica-btn" onclick="selecionarTecnica(this, 'box')">Box Breathing</button>
+        <button class="tecnica-btn" onclick="selecionarTecnica(this, '365')">Coerência</button>
+      </div>
+
+      <div class="tecnica-descricao" id="tecnicaDesc">
+        <strong>Técnica 4-7-8:</strong> Inspire por 4 segundos, segure por 7 e expire lentamente por 8. Ativa o sistema nervoso parassimpático e reduz o estado de alerta.
+      </div>
+
+      <!-- Círculo de respiração -->
+      <div class="respirar-centro">
+        <div class="circulo-container">
+          <div class="circulo-externo">
+            <div class="circulo-interno" id="circulo">
+              <span id="respirarTexto">Pronto?</span>
+              <span id="respirarCont" class="respirar-count"></span>
+            </div>
+          </div>
+          <svg class="progresso-svg" viewBox="0 0 200 200">
+            <circle class="progresso-track" cx="100" cy="100" r="90"/>
+            <circle class="progresso-bar" id="progressoBar" cx="100" cy="100" r="90"
+              stroke-dasharray="565" stroke-dashoffset="565"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="respirar-controles">
+        <button class="btn-primary" id="btnIniciar" onclick="iniciarRespiracao()">🫁 Começar</button>
+        <button class="btn-ghost hidden" id="btnParar" onclick="pararRespiracao()">Pausar</button>
+      </div>
+
+      <div class="ciclos-info">
+        Ciclos completados: <span id="ciclosNum">0</span>
+        <br><small>Recomendado: 3 a 5 ciclos</small>
+      </div>
+
+    </section>
+
+    <!-- Dicas -->
+    <section class="container">
+      <h2 class="section-title">💡 Como aproveitar melhor</h2>
+      <div class="dicas-grid dicas-simples">
+        <div class="dica-card">
+          <div class="dica-icone">🪑</div>
+          <h3>Sente-se confortável</h3>
+          <p>Coluna ereta, pés no chão, mãos sobre as pernas. Feche os olhos se quiser.</p>
+        </div>
+        <div class="dica-card">
+          <div class="dica-icone">🔇</div>
+          <h3>Ambiente calmo</h3>
+          <p>Se possível, procure um lugar tranquilo e silencioso para o exercício.</p>
+        </div>
+        <div class="dica-card">
+          <div class="dica-icone">🔁</div>
+          <h3>Repita quando precisar</h3>
+          <p>Pode usar antes de provas, situações de conflito ou antes de dormir.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">🫀</span>
+        <span class="logo-text">Inside<em>me</em></span>
+      </div>
+      <p>Pedir ajuda é um ato de coragem. Você merece apoio. 💜</p>
+      <p class="footer-cvv">Em crise? Ligue <strong>188</strong> (CVV) ou acesse <strong>cvv.org.br</strong></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
